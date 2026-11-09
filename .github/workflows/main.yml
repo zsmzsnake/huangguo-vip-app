@@ -1,0 +1,29 @@
+姓名: BUIld Android安装包
+在……之上:
+推:
+分支机构: [主要的]
+workflow_dispatch:
+工作:
+建立:
+连续的: Ubuntu-最新
+步骤:
+       - 姓名: 结帐
+uses: 操作者/结帐@v4
+       - 姓名: 安装Java
+uses: 操作/设置-Java@v4
+和……一起:
+分布: 的
+现在的java版本: '17'
+       - 姓名: 设置颤振
+uses: 没有任何的
+和……一起:
+渠道: 稳定的
+       - 姓名: 安装相依性
+跑: 颤振酒吧
+       - 姓名: 生成安装包调试
+跑: 颤振构建apk-调试
+       - 姓名: 上传安装包
+uses: 操作/上载工件@v4
+和……一起:
+姓名: app-debug-apk
+路径: 生成/app/输出/flutter-apk/app-debug.apk
